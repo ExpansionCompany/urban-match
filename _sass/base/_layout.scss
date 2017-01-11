@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: $root-font-size;
+  height: 100%;
+  
+  @include media($huge-screen-up) {
+    font-size: 1.25 * $root-font-size;
+  }
+
+  @include media(min-width 2400px) {
+    font-size: 1.5 * $root-font-size;
+  }
+}
+
+body {
+  background: $body-background-color;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  background: $base-background-color;
+}
+
+img {
+  width: 100%;
+}

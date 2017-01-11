@@ -1,0 +1,11 @@
+<nav class="site-links">
+  <div class="wrapper">
+
+    <ul>
+      {% for link in site.site_links %}
+      <li><a href="{{ link.url }}" title="{{ link.title }}"><img src="{{ link.image }}" alt="{{ link.title }}"></a></li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</nav>

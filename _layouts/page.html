@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="page-content">
+  <div class="wrapper">
+
+    <div class="text-container" id="text">
+      <h2>{{ page.title }}</h2>
+      <div class="excerpt">
+        <p>{{ page.excerpt_text }} <button class="more" onclick="expand()">more</button></p>
+      </div>
+      <div class="full-text">
+        {{ content }}
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+<script>
+  
+  function expand() {
+    var text = document.getElementById("text");
+    text.className += " expanded";
+  }
+  
+</script>

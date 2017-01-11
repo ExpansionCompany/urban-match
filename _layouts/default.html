@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="background-overlay" style="background-image: url({{ site.background_image }});"></div>
+    
+    <div class="page-wrapper">
+      
+      <div class="flexbox">
+
+        {% include header.html %}
+    
+        <main role="main" aria-label="Content">
+          {{ content }}
+        </main>
+        
+        {% include site-links.html %}
+        
+      </div>
+  
+      {% include footer.html %}
+      
+    </div>
+
+  </body>
+
+</html>

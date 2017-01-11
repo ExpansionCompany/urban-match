@@ -1,0 +1,123 @@
+/*! ============================================================= *
+    Cobalt
+    github.com/joaobfreire/cobalt
+*** ============================================================= */
+
+@import "lib/normalize";
+@import "lib/bourbon/bourbon";
+
+
+
+
+/** Media Queries
+*** ============================================================= */
+
+// Mixin usage examples:
+// @include media($large-screen-up)
+// @include media(min-width 960px)
+// @include media($large-screen-up, $landscape)
+// @include media(min-width 960px, min-aspect-ratio "5/4")
+
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $query: $query + " and (" + nth($arg, 1) + ": " + nth($arg, 2) + ")";
+  }
+  @media screen #{$query} {
+    @content;
+  }
+}
+
+$small-screen:   400px;
+$medium-screen:  640px;
+$large-screen:   960px;
+$xlarge-screen: 1200px;
+$huge-screen:   1920px;
+
+$small-screen-down: max-width $small-screen;
+$medium-screen-up:  min-width $medium-screen;
+$large-screen-up:   min-width $large-screen;
+$xlarge-screen-up:  min-width $xlarge-screen;
+$huge-screen-up:    min-width $huge-screen;
+
+$landscape-ratio: "5/4";
+$portrait-ratio:  "4/5";
+$very-wide-ratio: "2/1";
+$very-tall-ratio: "1/2";
+
+$landscape: min-aspect-ratio $landscape-ratio;
+$portrait:  max-aspect-ratio $portrait-ratio;
+$very-wide: min-aspect-ratio $very-wide-ratio;
+$very-tall: max-aspect-ratio $very-tall-ratio;
+
+
+
+
+/** Base Styles
+*** ============================================================= */
+
+$root-font-size: 16px; // Set in px
+$base-font-size: 1em;  // Set in em
+$scale-factor: $base-font-size / 1em;
+
+$base-padding: 2rem * $scale-factor;
+$content-width: 64rem * $scale-factor;
+$page-width: $base-padding * 2 + $content-width;
+
+$base-spacing: 2em;
+$small-spacing: $base-spacing / 2;
+$text-width: 32em;
+
+@import "base/base";
+
+
+
+
+/** Layout
+*** ============================================================= */
+
+// Full-width layout
+.wrapper {
+  margin: 0 auto;
+  max-width: $page-width;
+  padding: $base-padding;
+}
+
+/*
+// Centered column layout
+.page-wrapper {
+  margin: 0 auto;
+  max-width: $page-width;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: $page-width;
+  padding: $base-padding;
+}
+*/
+
+/*
+// Centered column layout (no margins)
+body {
+  background: $base-background-color;
+}
+.page-wrapper {
+  margin: 0 auto;
+  max-width: $page-width;
+  padding: 0 $base-padding;
+}
+.wrapper {
+  padding: $base-padding 0;
+}
+*/
+
+
+
+
+/** Component Styles
+*** ============================================================= */
+
+@import "header-footer";
+@import "homepage";
+@import "text";
+

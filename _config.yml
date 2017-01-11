@@ -1,0 +1,47 @@
+---
+title: Urban Match
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: email@urban-match.com
+phone: "(+351) 21 099 99 93"
+address: LX Factory, Edifício I, 4º Piso, Rua Rodrigues Faria 103, 1300-501 Lisboa,
+  Portugal
+description: Urban Match will now assume its original nature, to become a research
+  lab and start-up builder focused on creating and growing companies dedicated to
+  improving urban development through hardware, software and services.
+page_logo: "/uploads/urbanmatch-logo.svg"
+logo: "/uploads/logo.png"
+background_image: "/uploads/background.jpg"
+site_links:
+- title: Expansion Company
+  url: http://www.expansioncompany.com/
+  image: "/uploads/circle-exco.svg"
+- title: Placer App
+  url: http://app.placer.pt/
+  image: "/uploads/Footer%20Placer%20App.svg"
+- title: Placer
+  url: http://www.placer.pt/
+  image: "/uploads/circle-placer.svg"
+baseurl: 
+url: http://www.urban-match.com
+lang: en
+google_analytics: UA-90066320-3
+markdown: kramdown
+sass:
+  style: compressed
+permalink: pretty
+gems:
+- jekyll-seo-tag
+exclude:
+- Gemfile
+- Gemfile.lock
+- Gruntfile.js
+- node_modules
+- package.json
+- README.md
