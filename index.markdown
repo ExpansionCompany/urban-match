@@ -1,5 +1,5 @@
 ---
-title: We just took a giant step towards our goals
+title: We just took a giant step towards our goals.
 excerpt_text: Urban Match will now assume its original nature, to become a research
   lab and start-up builder focused on creating and growing companies dedicated to
   improving urban development through hardware, software and services.
