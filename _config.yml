@@ -19,15 +19,15 @@ page_logo: "/uploads/urbanmatch-logo.svg"
 logo: "/uploads/logo.png"
 background_image: "/uploads/background.jpg"
 site_links:
-- title: Expansion Company
-  url: http://www.expansioncompany.com/
-  image: "/uploads/circle-exco.svg"
-- title: Placer App
-  url: http://app.placer.pt/
-  image: "/uploads/Footer%20Placer%20App.svg"
 - title: Placer
   url: http://www.placer.pt/
   image: "/uploads/circle-placer.svg"
+- title: Placer App
+  url: http://app.placer.pt/
+  image: "/uploads/Footer%20Placer%20App.svg"
+- title: Expansion Company
+  url: http://www.expansioncompany.com/
+  image: "/uploads/circle-exco.svg"
 baseurl: 
 url: http://www.urban-match.com
 lang: en
